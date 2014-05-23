@@ -1,12 +1,22 @@
-User
+User:
+  - user: string
+  - password: string
+  - name: string
 
-Noun
+Noun:
+  - noun: string
 
-Verb
+Person:
+  - person:  string
 
-Third piece of statement
+Verb:
+  - verb: string
 
-Comments
+Event:
+  - event: string
+
+Comments:
+  -
 
 
 
