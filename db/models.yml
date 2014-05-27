@@ -1,5 +1,5 @@
 User:
-  - user: string
+  - username: string
   - password: string
   - name: string
 
@@ -15,8 +15,12 @@ Verb:
 Event:
   - event: string
 
-Comments:
-  -
+Comment:
+  - rating: integer
+  - comment: string
+  - user_id: integer
+  - created_at: datetime
+
 
 
 
