@@ -7,11 +7,12 @@ Final::Application.routes.draw do
 
 #  get "/" => "movies#index"
 
- get "/logout" => 'sessions#logout'
-  get "/login" => 'sessions#login'
-  post "/authenticate" => 'sessions#authenticate'
+get "/logout" => 'sessions#logout'
+get "/login" => 'sessions#login'
+post "/authenticate" => 'sessions#authenticate'
 
 delete "/" => "noun#destroy"
+get "/delete" => "noun#destroy"
 
 # --- Create
   get "/users/new" => 'users#new'
