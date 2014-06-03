@@ -7,6 +7,10 @@ Final::Application.routes.draw do
 
 #  get "/" => "movies#index"
 
+ get "/logout" => 'sessions#logout'
+  get "/login" => 'sessions#login'
+  post "/authenticate" => 'sessions#authenticate'
+
 delete "/" => "noun#destroy"
 
 # --- Create
@@ -40,7 +44,7 @@ delete "/" => "noun#destroy"
   patch "/users/:id" => 'users#update'
 
   # --- Delete
-  delete "/users/:id" => 'users#destroy'
+  delete "/noun/:id" => 'noun#destroy'
 
 
 

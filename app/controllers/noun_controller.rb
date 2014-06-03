@@ -16,7 +16,7 @@ class NounController < ApplicationController
     verb.delete
     event = Event.find_by("event" => params["event"])
     event.delete
-    person = Person.find_by("event" => params["event"])
+    person = Person.find_by("person" => params["person"])
     person.delete
     redirect_to "/"
   end
