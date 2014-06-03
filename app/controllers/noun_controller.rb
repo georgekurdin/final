@@ -10,14 +10,8 @@ class NounController < ApplicationController
   end
 
  def destroy
-    noun = Noun.find_by("noun" => params["noun"])
+    noun = Noun.find_by("id" => params["id"])
     noun.delete
-    verb = Verb.find_by("verb" => params["verb"])
-    verb.delete
-    event = Event.find_by("event" => params["event"])
-    event.delete
-    person = Person.find_by("person" => params["person"])
-    person.delete
     redirect_to "/"
   end
 

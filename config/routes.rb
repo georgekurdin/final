@@ -14,6 +14,8 @@ post "/authenticate" => 'sessions#authenticate'
 delete "/" => "noun#destroy"
 get "/delete" => "noun#destroy"
 
+
+
 # --- Create
   get "/users/new" => 'users#new'
   post "/users" => 'users#create'
