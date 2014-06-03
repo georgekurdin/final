@@ -3,33 +3,84 @@ Final::Application.routes.draw do
 
 
   # Specify a custom home page
- get "/" => "humor/jokes"
+ get "/" => "humor#jokes"
+
 #  get "/" => "movies#index"
 
-
-  # Sign-In and Sign-Out
-
-  get "/login" => 'sessions#login'
-  post "/authenticate" => 'sessions#authenticate'
-
-  # Resource: Reviews
+ # Resource: Noun
 
   # --- Create
-  get "/reviews/new" => 'reviews#new'
-  post "/reviews" => 'reviews#create'
+  get "/new" => 'humor#new'
+  post "/new" => 'noun#create'
 
   # --- Read
-  get "/reviews" => 'reviews#index'
-  get "/reviews/:id" => 'reviews#show'
+  get "/users" => 'users#index'
+  get "/users/:id" => 'users#show'
 
   # -- Update
-  get "/reviews/:id/edit" => 'reviews#edit'
-  patch "/reviews/:id" => 'reviews#update'
+  get "/users/:id/edit" => 'users#edit'
+  patch "/users/:id" => 'users#update'
 
   # --- Delete
-  delete "/reviews/:id" => 'reviews#destroy'
+  delete "/users/:id" => 'users#destroy'
 
 
+
+  # Resource: Verb
+
+  # --- Create
+  get "/movies/new" => 'movies#new'
+ post "/new" => 'verb#create'
+
+  # --- Read
+  get "/movies" => 'movies#index'
+  get "/movies/:id" => 'movies#show'
+
+  # -- Update
+  get "/movies/:id/edit" => 'movies#edit'
+  patch "/movies/:id" => 'movies#update'
+
+  # --- Delete
+  delete "/movies/:id" => 'movies#destroy'
+
+
+
+  # Resource: event
+
+  # --- Create
+  get "/directors/new" => 'directors#new'
+  post "/new" => 'event#create'
+
+  # --- Read
+  get "/directors" => 'directors#index'
+  get "/directors/:id" => 'directors#show'
+
+  # -- Update
+  get "/directors/:id/edit" => 'directors#edit'
+  patch "/directors/:id" => 'directors#update'
+
+  # --- Delete
+  delete "/directors/:id" => 'directors#destroy'
+
+
+  # Resource: Person
+
+  # --- Create
+  get "/actors/new" => 'actors#new'
+  post "/new" => 'person#create'
+
+  # --- Read
+  get "/actors" => 'actors#index'
+  get "/actors/:id" => 'actors#show'
+
+  # -- Update
+  get "/actors/:id/edit" => 'actors#edit'
+  patch "/actors/:id" => 'actors#update'
+
+  # --- Delete
+  delete "/actors/:id" => 'actors#destroy'
+
+end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -85,4 +136,4 @@ Final::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
+

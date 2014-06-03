@@ -21,6 +21,14 @@ Comment:
   - user_id: integer
   - created_at: datetime
 
+  Quote:
+  - quote: string
+  - vote_count: integer
+
+  Vote:
+  - vote: integer
+  -quote_id: integer
+
 
 
 

@@ -11,12 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140524002515) do
+ActiveRecord::Schema.define(version: 20140527030227) do
 
   create_table "comments", force: true do |t|
-    t.integer "rating"
-    t.string  "comment"
-    t.integer "user_id"
+    t.integer  "rating"
+    t.string   "comment"
+    t.integer  "user_id"
+    t.datetime "created_at"
   end
 
   create_table "events", force: true do |t|
@@ -32,9 +33,9 @@ ActiveRecord::Schema.define(version: 20140524002515) do
   end
 
   create_table "users", force: true do |t|
-    t.string "user"
     t.string "password"
     t.string "name"
+    t.string "username"
   end
 
   create_table "verbs", force: true do |t|

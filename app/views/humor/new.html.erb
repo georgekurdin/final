@@ -1,0 +1,28 @@
+new.html.erb
+
+<div class="row">
+  <div class="col-md-5">
+
+   <%= form_tag "/new", "method" => "post"  %>
+
+     <div class="form-group">
+          <%= label_tag "noun", "Pick a noun:" %>
+          <%= text_field_tag "noun", "", "class" => "form-control" %>
+     </div>
+
+     <div class="form-group">
+          <%= label_tag "person", "Pick a person:" %>
+          <%= text_field_tag "person", "", "class" => "form-control" %>
+     </div>
+
+     <div class="form-group">
+          <%= label_tag "verb", "Pick a verb:" %>
+          <%= text_field_tag "verb", "", "class" => "form-control" %>
+     </div>
+
+     <div class="form-group">
+          <%= label_tag "event", "Pick an event:" %>
+          <%= text_field_tag "event", "", "class" => "form-control" %>
+     </div>
+
+     <%= submit_tag "Incubate that Business", "class" => "btn btn-lg btn-success" %> or <%= link_to "Cancel", "/" %>

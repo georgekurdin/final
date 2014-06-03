@@ -1,35 +1,14 @@
 
-<% Noun.sample do |noun| %>
+<% random_noun = Noun.sample %>
+<% random_verb = Verb.sample %>
+<% random_event = Event.sample %>
+<% random_person = Person.sample %>
 
-  I am going to incubate <%= noun %> that <%= Person.read("person") %> <%= Verb.read("verb") %> after <%= Event.read("event") %>
+<p>  <% quote = "I am going to incubate your app that disrupts the #{random_noun["noun"]} market by #{random_verb["verb"]} when #{random_event["event"]}" %>
 
-<% end %>
+<%= random_person["person"] %> is going to incubate your app that disrupts the <%= random_noun["noun"] %> market by <%= random_verb["verb"] %> when <%= random_event["event"] %>.
 
-<div class="row">
-  <div class="col-md-5">
-     <div class="form-group">
-          <%= label_tag "noun", "Pick a noun:" %>
-          <%= text_field_tag "noun", "", "class" => "form-control" %>
-     </div>
+</p>
 
-     <div class="form-group">
-          <%= label_tag "noun", "Pick a noun:" %>
-          <%= text_field_tag "noun", "", "class" => "form-control" %>
-     </div>
+<%= link_to "Add a New App", "/new" %>
 
-     <div class="form-group">
-          <%= label_tag "person", "Pick a person:" %>
-          <%= text_field_tag "person", "", "class" => "form-control" %>
-     </div>
-
-     <div class="form-group">
-          <%= label_tag "verb", "Pick a verb:" %>
-          <%= text_field_tag "verb", "", "class" => "form-control" %>
-     </div>
-
-     <div class="form-group">
-          <%= label_tag "event", "Pick an event:" %>
-          <%= text_field_tag "event", "", "class" => "form-control" %>
-     </div>
-
-     <%= submit_tag "Incubate that Business", "class" => "btn btn-lg btn-success" %> or <%= link_to "Cancel", "/" %>
