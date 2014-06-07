@@ -21,17 +21,13 @@ Comment:
   - user_id: integer
   - created_at: datetime
 
-  Quote:
+Quote:
   - quote: string
   - vote_count: integer
 
-  Vote:
+Vote:
   - vote: integer
-  -quote_id: integer
-
-
-
-
+  - quote_id: integer
 
 # Example table for a typical Book model.
 #

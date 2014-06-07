@@ -34,7 +34,7 @@ Verb.create("verb" => "choreographing a dance")
 Event.delete_all
 Event.create("event" => "nuns walk by")
 Event.create("event" => "the Super Bowl starts")
-Event.create("event" => "Armgeddon begins")
+Event.create("event" => "Armageddon begins")
 Event.create("event" => "Easter dresses become too Eastery")
 Event.create("event" => "women nearby are interested")
 

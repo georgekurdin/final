@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140527030227) do
+ActiveRecord::Schema.define(version: 20140607190652) do
 
   create_table "comments", force: true do |t|
     t.integer  "rating"
@@ -32,14 +32,24 @@ ActiveRecord::Schema.define(version: 20140527030227) do
     t.string "person"
   end
 
+  create_table "quotes", force: true do |t|
+    t.string  "quote"
+    t.integer "vote_count"
+  end
+
   create_table "users", force: true do |t|
+    t.string "username"
     t.string "password"
     t.string "name"
-    t.string "username"
   end
 
   create_table "verbs", force: true do |t|
     t.string "verb"
+  end
+
+  create_table "votes", force: true do |t|
+    t.integer "vote"
+    t.integer "quote_id"
   end
 
 end
