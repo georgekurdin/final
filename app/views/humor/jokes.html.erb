@@ -1,14 +1,44 @@
 
+
 <% random_noun = Noun.sample %>
 <% random_verb = Verb.sample %>
 <% random_event = Event.sample %>
 <% random_person = Person.sample %>
+<% random_image = Image.sample %>
 
 <p>  <% quote = "I am going to incubate your app that disrupts the #{random_noun["noun"]} market by #{random_verb["verb"]} when #{random_event["event"]}" %>
-
-<%= random_person["person"] %> is going to incubate your app that disrupts the <%= random_noun["noun"] %> market by <%= random_verb["verb"] %> when <%= random_event["event"] %>.
-
 </p>
+
+  <div class="image">
+
+       <img src = "<%= "#{random_image["image_url"]}" %>" alt="" />
+
+
+<h2><span>
+<%= random_person["person"] %> is going to incubate your app that disrupts the <%= random_noun["noun"] %> market by <%= random_verb["verb"] %> when <%= random_event["event"] %>
+<span class='spacer'></span>
+</h2>
+       <style>
+            .image {
+               position: relative;
+                width: 100%;
+                  }
+             h2 {
+              position: absolute;
+              top: 300px;
+              left: 0;
+              width: 100%;
+             }
+             h2 span {
+   color: white;
+   font: bold 48px/70px Helvetica, Sans-Serif;
+   letter-spacing: -1px;
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px;
+}
+</style>
+</div>
 
 <p>
 <%= link_to "Add a New App", "/new" %>

@@ -42,6 +42,11 @@ Comment.delete_all
 Comment.create("user_id" => ap["id"])
 Comment.create("user_id" => ap["id"])
 
+Image.delete_all
+Image.create("image_url" => "http://24.media.tumblr.com/cb971f1b0b80c4a2d19bf7abf85ca3c3/tumblr_n6rzueLIQy1st5lhmo1_1280.jpg")
+Image.create("image_url" => "http://24.media.tumblr.com/9bc8fd8ca3fb2cd3757715f05d45be50/tumblr_n6rztipoQy1st5lhmo1_1280.jpg")
+Image.create("image_url" => "http://37.media.tumblr.com/78d0d53ec927602820055f4d1a3ef6cb/tumblr_n5wa85HJXj1st5lhmo1_1280.jpg")
+Image.create("image_url" => "http://37.media.tumblr.com/d55a509993790027240311c9f611aaf8/tumblr_n0hpzpKEfE1st5lhmo1_1280.jpg")
 
 # we need to figure out how to get specific phrases to freeze and then be voted on (and stay frozen)
 

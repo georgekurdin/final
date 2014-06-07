@@ -29,6 +29,9 @@ Vote:
   - vote: integer
   - quote_id: integer
 
+Image:
+  - image_url: string
+
 # Example table for a typical Book model.
 #
 # Book:
