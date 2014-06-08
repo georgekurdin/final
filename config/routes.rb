@@ -4,6 +4,7 @@ Final::Application.routes.draw do
 
   # Specify a custom home page
  get "/" => "humor#jokes"
+ get "quote/index" => "quote#index"
 
 #  get "/" => "movies#index"
 
@@ -44,7 +45,7 @@ get "/delete" => "noun#destroy"
 
   # -- Update
   get "/users/:id/edit" => 'users#edit'
-  patch "/users/:id" => 'users#update'
+  patch "/noun/:id" => 'noun#update'
 
   # --- Delete
   delete "/noun/:id" => 'noun#destroy'
@@ -104,6 +105,42 @@ get "/delete" => "noun#destroy"
 
   # --- Delete
   delete "/actors/:id" => 'actors#destroy'
+
+# Resource: Vote
+
+  # --- Create
+  get "/actors/new" => 'actors#new'
+  post "/new" => 'person#create'
+
+  # --- Read
+  get "/actors" => 'actors#index'
+  get "/actors/:id" => 'actors#show'
+
+  # -- Update
+  get "/actors/:id/edit" => 'actors#edit'
+  patch "/vote/:id" => 'noun#update'
+
+  # --- Delete
+  delete "/actors/:id" => 'actors#destroy'
+
+  # Resource: Quote
+
+  # --- Create
+
+  post "/quote" => 'quote#create'
+
+  # --- Read
+  get "/quote" => 'quote#index'
+  get "/actors/:id" => 'actors#show'
+
+  # -- Update
+  get "/actors/:id/edit" => 'actors#edit'
+  patch "/quote/:id" => 'quote#update'
+
+  # --- Delete
+  delete "/actors/:id" => 'actors#destroy'
+
+
 
 end
 

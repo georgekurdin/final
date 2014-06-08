@@ -1,0 +1,8 @@
+Greatest hits
+
+<% Quote.read.order("vote_count desc").each do |q| %>
+<p>
+  <%= q.quote %>
+ # yeah that's a sweet app  <%= q.vote_count %>
+</p>
+<% end %>

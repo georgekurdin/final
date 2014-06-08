@@ -15,4 +15,8 @@ class NounController < ApplicationController
     redirect_to "/"
   end
 
+ def update
+
+end
+
 end
