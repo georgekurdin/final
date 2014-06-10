@@ -144,7 +144,7 @@ get "/delete" => "noun#destroy"
 
   # --- Create
 
-  post "/vote" => 'vote#create'
+  patch "/vote" => 'vote#update'
 
   # --- Read
   get "/quote" => 'quote#index'
@@ -157,7 +157,7 @@ get "/delete" => "noun#destroy"
   # --- Delete
   delete "/actors/:id" => 'actors#destroy'
 
-
+get "/quote/index" => "quote#index"
 
 end
 
