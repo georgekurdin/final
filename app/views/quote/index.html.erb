@@ -3,13 +3,13 @@
 <div id="container">
 <div class="left">
 
-<% vote = Quote.read.order("vote_count desc").each do |q| %>
+<% vote = Quote.read.order("vote_count desc").each do |quote| %>
 
 <p>
-   <b> <h5> <%= q.vote_count %>  </b> </h>
- <%= link_to "Vote for this app", "/vote", "method" => "patch" %>
+   <b> <h5> <%= quote.vote_count %>  </b> </h>
+ <%= link_to "Vote for this app", "/vote?q=#{quote["quote"]}", "method" => "patch" %>
    <span class="glyphicon glyphicon-arrow-up"> </span>
-      <%= q.quote %>
+      <%= quote.quote %>
 </p>
 
 <% end %>
