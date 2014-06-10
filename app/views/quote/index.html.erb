@@ -1,8 +1,17 @@
-Greatest hits
+<div id="headerbg">
+<h1><center> Greatest Hits</h1>
+<div id="container">
+<div class="left">
 
 <% Quote.read.order("vote_count desc").each do |q| %>
 <p>
-  <%= q.quote %>
- # yeah that's a sweet app  <%= q.vote_count %>
+   <b> <h5> <%= q.vote_count %>  </b> </h>
+ <%= link_to "Vote for this app", "/vote?q=#{q}", "method" => "post" %>
+   <span class="glyphicon glyphicon-arrow-up"> </span>
+      <%= q.quote %>
 </p>
+
 <% end %>
+</style>
+</div>
+

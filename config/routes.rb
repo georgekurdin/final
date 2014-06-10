@@ -140,6 +140,23 @@ get "/delete" => "noun#destroy"
   # --- Delete
   delete "/actors/:id" => 'actors#destroy'
 
+   # Resource: Vote
+
+  # --- Create
+
+  post "/vote" => 'vote#create'
+
+  # --- Read
+  get "/quote" => 'quote#index'
+  get "/actors/:id" => 'actors#show'
+
+  # -- Update
+  get "/actors/:id/edit" => 'actors#edit'
+  patch "/quote/:id" => 'quote#update'
+
+  # --- Delete
+  delete "/actors/:id" => 'actors#destroy'
+
 
 
 end

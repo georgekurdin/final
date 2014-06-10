@@ -16,12 +16,18 @@
       <div class="header">
         <div class="row">
           <div class="col-md-12">
-            <h1>Let Me Incubate Your Startup</h1>
+            <h1>Let Me Incubate Your App</h1>
           </div>
         </div>
 
         <div class="row">
 
+        <div class="pull-left">
+            <%= link_to "Greatest Hits", "quote/index" %> |
+            <%= link_to "I want to make my own", "humor#new" %> |
+            <%= link_to "Give me a new one", "/" %>
+
+             </div>
           <div class="pull-right">
             <% user = User.find_by("id" => cookies["user_id"]) %>
             <% if user != nil %>
@@ -32,6 +38,7 @@
             <%= link_to "My Profile", '#' %> |
             <%= link_to "Sign Out", '/logout' %>
           </div>
+
         </div>
         <hr>
         <h4 class="text-warning"><%= notice %></h4>

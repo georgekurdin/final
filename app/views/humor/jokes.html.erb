@@ -1,13 +1,9 @@
-
-
 <% random_noun = Noun.sample %>
 <% random_verb = Verb.sample %>
 <% random_event = Event.sample %>
 <% random_person = Person.sample %>
 <% random_image = Image.sample %>
-
-<p>  <% quote = "I am going to incubate your app that disrupts the #{random_noun["noun"]} market by #{random_verb["verb"]} when #{random_event["event"]}" %>
-<%= quote %>
+<p>  <% quote = "#{random_person["person"]} is going to incubate your app that disrupts the #{random_noun["noun"]} market by #{random_verb["verb"]} when #{random_event["event"]}" %>
 </p>
 
   <div class="image">
@@ -16,37 +12,87 @@
 
 
 <h2><span>
-<%= random_person["person"] %> is going to incubate your app that disrupts the <%= random_noun["noun"] %> market by <%= random_verb["verb"] %> when <%= random_event["event"] %>
-<span class='spacer'></span>
+<%= quote %>
 </h2>
-       <style>
-            .image {
-               position: relative;
-                width: 100%;
-                  }
-             h2 {
-              position: absolute;
-              top: 30px;
-              left: 0;
-              width: 100%;
-             }
-             h2 span {
-   color: white;
-   font: bold 48px/70px Helvetica, Sans-Serif;
-   letter-spacing: -1px;
-   background: rgb(0, 0, 0); /* fallback color */
-   background: rgba(0, 0, 0, 0.7);
-   padding: 10px;
-}
-</style>
-</div>
 
-<p>
-<%= link_to "Add a New App", "/new" %>
+<p> <h3><span>
+<%= link_to "Weak:I want to make my own", "/new" %>
 </p>
-<p>
-<%= link_to "That's a cool app", "/quote?q=#{quote}", "method" => "post" %>
+</h3>
+
+<p> <h4><span>
+<%= link_to "Awesome:That's a cool app", "/quote?q=#{quote}", "method" => "post" %>
 </p>
-<p>
+</h4>
+
+<p><h5><span>
 <%= link_to "I don't like that noun at all", "/noun/#{random_noun["id"]}", "method" => "delete" %>
 </p>
+</h5>
+
+<span class='spacer'></span>
+<style>
+ .image {
+         position: relative;
+         width: 100% auto;
+        }
+    h2 {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 110%;
+       }
+    h2 span {
+      color: white;
+      font: bold 48px/70px Helvetica, Sans-Serif;
+      letter-spacing: 1px;
+      background: rgb(0, 0, 0); /* fallback color */
+      background: rgba(0, 0, 0, 0.7);
+      padding: 7px;
+      }
+    h3 {
+        position: absolute;
+        top: 600px;
+        left: 0;
+        width: 110%;
+        }
+    h3 span {
+      color: white;
+      font: bold 40px/70px Helvetica, Sans-Serif;
+      letter-spacing: 1px;
+      background: rgb(0, 0, 0); /* fallback color */
+      background: rgba(0, 0, 0, 0.7);
+      padding: 3px;
+      }
+     h4 {
+        position: absolute;
+        top: 662px;
+        left: 0;
+        width: 110%;
+        }
+    h4 span {
+        color: white;
+        font: bold 40px/70px Helvetica, Sans-Serif;
+        letter-spacing: 1px;
+        background: rgb(0, 0, 0); /* fallback color */
+        background: rgba(0, 0, 0, 0.7);
+        padding: 3px;
+      }
+    h5 {
+        position: absolute;
+        top: 714px;
+        left: 0;
+        width: 110%;
+        }
+    h5 span {
+      color: white;
+      font: bold 40px/70px Helvetica, Sans-Serif;
+      letter-spacing: 1px;
+      background: rgb(0, 0, 0); /* fallback color */
+      background: rgba(0, 0, 0, 0.7);
+      padding: 3px;
+      }
+</style>
+
+</div>
+
